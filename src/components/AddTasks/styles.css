@@ -16,18 +16,25 @@ input {
 input::placeholder {
   color: var(--gray-100);
 }
+input:focus {
+  border: 1px solid var(--purple);
+}
 
 button {
   height: 2.5rem;
   border-radius: 5px;
   border: none;
   margin-left: 1rem;
-  background-color: var(--blue);
+  background-color: var(--blue-dark);
   color: var(--gray-100);
   padding: 0.5rem;
   width: 6rem;
+  cursor: pointer;
 }
 
+button:hover {
+  background-color: var(--blue);
+}
 svg {
   font-size: 1.2rem;
   margin-left: 10px;
