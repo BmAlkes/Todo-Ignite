@@ -1,0 +1,47 @@
+.taskLine {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  background-color: var(--gray-500);
+  border: none;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.taskLine div {
+  display: flex;
+  align-items: center;
+}
+.taskLine input[type="checkbox"] {
+  all: unset;
+  border: 3px solid var(--blue);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+.taskLine input[type="checkbox"]:checked {
+  background-color: var(--purple);
+  border: 3px solid var(--purple);
+}
+.taskLine li {
+  list-style: none;
+  margin-left: 1rem;
+  font-size: 1.2rem;
+  color: var(--gray-100);
+}
+
+.taskLine li.active {
+  text-decoration: line-through;
+}
+
+.taskLine svg {
+  border: none;
+  width: 2rem;
+  font-size: 4rem;
+  cursor: pointer;
+}
+.taskLine svg:hover {
+  color: var(--blue);
+}

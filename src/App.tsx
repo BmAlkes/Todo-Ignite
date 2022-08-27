@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import AddTask from "./components/AddTasks";
+import CreateTask from "./components/CreateTasks";
 import Header from "./components/Header";
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <Header />
       <div>
-        <AddTask />
+        <CreateTask />
       </div>
     </div>
   );
