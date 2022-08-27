@@ -4,12 +4,17 @@ import "./styles.css";
 import { v4 as uuidv4 } from "uuid";
 import Tasks from "../Tasks";
 
+interface TasksII {
+  id: string;
+  task: string;
+  isComplete: boolean;
+}
+
 const CreateTask = () => {
   const [tasks, setTasks] = useState([]);
   const [newTasks, setNewTasks] = useState("");
 
-  const handleNewTask = (event) => {
-    console.log(event.target);
+  const handleNewTask = (event: FormEvent) => {
     setNewTasks({
       id: event.target.id,
       tasks: event.target.value,
@@ -17,7 +22,7 @@ const CreateTask = () => {
     });
   };
 
-  const handleCreateNewTask = (e) => {
+  const handleCreateNewTask = (e: FormEvent) => {
     e.preventDefault();
 
     setTasks([...tasks, newTasks]);
@@ -60,7 +65,7 @@ const CreateTask = () => {
           required
           name="task"
           onChange={handleNewTask}
-          isComplete="false"
+          isComplete={false}
         />
         <button type="submit">
           Criar <Plus />

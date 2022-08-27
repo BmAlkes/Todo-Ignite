@@ -35,7 +35,9 @@
 .taskLine li.active {
   text-decoration: line-through;
 }
-
+.taskLine li.desactive {
+  text-decoration: none;
+}
 .taskLine svg {
   border: none;
   width: 2rem;
